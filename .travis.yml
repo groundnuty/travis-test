@@ -7,8 +7,8 @@ script:
 after_success:
   - echo "aa"
   
-#deploy:
-#  # deploy develop to the staging environment
-#  - provider: script
-#    script: echo "aa" && exit 1
+deploy:
+  # deploy develop to the staging environment
+  - provider: script
+    script: a.sh
 
