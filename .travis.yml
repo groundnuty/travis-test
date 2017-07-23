@@ -2,10 +2,10 @@ sudo: required
 
 
 script:
-- exit 0
+- echo "script!!" && exit 0
 
 deploy:
   # deploy develop to the staging environment
   - provider: script
-    script: exit 1
+    script: echo "aa" && exit 1
 
