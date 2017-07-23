@@ -1,6 +1,5 @@
 sudo: required
-services:
-- docker
+
 
 script:
 - exit 0
@@ -8,5 +7,5 @@ script:
 deploy:
   # deploy develop to the staging environment
   - provider: script
-    script: echo "a"
+    script: exit 1
 
