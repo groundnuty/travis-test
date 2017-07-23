@@ -6,9 +6,11 @@ script:
 
 #after_success:
 #  - echo "aa"
-  
-deploy:
-  # deploy develop to the staging environment
-  - provider: script
-    script: a.sh
 
+
+deploy:
+  provider: script
+  script: a.sh
+  skip_cleanup: true
+  on:
+    all_branches: true
