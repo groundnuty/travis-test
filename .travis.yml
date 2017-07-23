@@ -2,7 +2,7 @@ sudo: required
 
 
 script:
-- echo "script!!" && exit 0
+  - echo "script!!" && exit 0
 
 after_success:
   - echo "aa" && exit 1
