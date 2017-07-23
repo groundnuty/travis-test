@@ -4,8 +4,11 @@ sudo: required
 script:
 - echo "script!!" && exit 0
 
-deploy:
-  # deploy develop to the staging environment
-  - provider: script
-    script: echo "aa" && exit 1
+after_success:
+  - echo "aa" && exit 1
+
+#deploy:
+#  # deploy develop to the staging environment
+#  - provider: script
+#    script: echo "aa" && exit 1
 
