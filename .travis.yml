@@ -5,8 +5,8 @@ script:
   - echo "script!!" && exit 0
 
 after_success:
-  - echo "aa" && exit 1
-
+  - echo "aa"
+  
 #deploy:
 #  # deploy develop to the staging environment
 #  - provider: script
