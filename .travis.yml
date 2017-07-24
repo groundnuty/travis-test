@@ -2,5 +2,16 @@ script:
   - echo "script!!" && exit 0
 
 deploy:
-  provider: script
-  script: sh aa.sh
+  provider: releases
+  api_key:
+    secure: securekeyhere
+  file: myrepo-$TRAVIS_BRANCH.tar.gz
+  on:
+    condition: $PRODBUILDCOMPLETE = true
+    repo: myname/myrepo
+    all_branches: true
+    tags: true
+    
+#deploy:
+#  provider: script
+#  script: sh aa.sh
