@@ -1,16 +1,6 @@
-sudo: required
-
-
 script:
   - echo "script!!" && exit 0
-
-#after_success:
-#  - echo "aa"
-
 
 deploy:
   provider: script
   script: sh aa.sh
-  skip_cleanup: true
-  on:
-    all_branches: true
