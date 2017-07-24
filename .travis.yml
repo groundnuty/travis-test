@@ -1,16 +1,13 @@
 script:
-  - echo "script!!" && exit 0
+  - echo "script!!"
 
 deploy:
-  provider: releases
-  api_key:
-    secure: securekeyhere
-  file: myrepo-$TRAVIS_BRANCH.tar.gz
-  on:
-    condition: $PRODBUILDCOMPLETE = true
-    repo: myname/myrepo
-    all_branches: true
-    tags: true
+ provider: pages
+ skip_cleanup: true
+ github_token: $GITHUB_TOKEN # Set in travis-ci.org dashboard
+ local_dir: site
+ on:
+   branch: master
     
 #deploy:
 #  provider: script
