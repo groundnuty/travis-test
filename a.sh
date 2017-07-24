@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 
 echo "deploy!"
-exit 1
+exit 0
