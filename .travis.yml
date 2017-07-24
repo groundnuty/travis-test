@@ -4,12 +4,7 @@ script:
 deploy:
   # deploy develop to the staging environment
   - provider: script
-    script: scripts/deploy.sh staging
-    on:
-      branch: develop
-  # deploy master to production
-  - provider: script
-    script: scripts/deploy.sh production
+    script: aaaaa.sh
     on:
       branch: master
     
