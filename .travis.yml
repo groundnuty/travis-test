@@ -2,12 +2,16 @@ script:
   - echo "script!!"
 
 deploy:
- provider: pages
- skip_cleanup: true
- github_token: $GITHUB_TOKEN # Set in travis-ci.org dashboard
- local_dir: site
- on:
-   branch: master
+  # deploy develop to the staging environment
+  - provider: script
+    script: scripts/deploy.sh staging
+    on:
+      branch: develop
+  # deploy master to production
+  - provider: script
+    script: scripts/deploy.sh production
+    on:
+      branch: master
     
 #deploy:
 #  provider: script
