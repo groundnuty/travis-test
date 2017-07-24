@@ -5,8 +5,7 @@ deploy:
   # deploy develop to the staging environment
   - provider: script
     script: aaaaa.sh
-    on:
-      branch: master
+
     
 #deploy:
 #  provider: script
